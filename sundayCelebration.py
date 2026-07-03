@@ -19,7 +19,7 @@ SPOTIFY_CLIENT_ID = os.getenv("SPOTIFY_CLIENT_ID")
 SPOTIFY_CLIENT_SECRET = os.getenv("SPOTIFY_CLIENT_SECRET")
 SPOTIFY_REDIRECT_URI = "http://127.0.0.1:8080"
 SPOTIFY_SCOPE = "playlist-modify-public playlist-modify-private"
-SPOTIFY_PLAYLIST_ID = os.getenv("SPOTIFY_PLAYLIST_ID")
+SPOTIFY_PLAYLIST_ID = os.getenv("SPOTIFY_PLAYLIST_SUNDAY_ID")
 
 
 def get_next_sunday_songs():
@@ -147,7 +147,7 @@ if __name__ == "__main__":
 
         # 2. Busca os IDs no Spotify
         sp_client, track_uris = search_songs_on_spotify(titles)
-        
+
         # 3. Atualiza a Playlist
         update_spotify_playlist(sp_client, track_uris)
     else:
