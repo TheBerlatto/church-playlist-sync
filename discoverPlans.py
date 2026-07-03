@@ -26,7 +26,7 @@ def descobrir_ids():
         # transforma o texto bruto retornado (JSON) em um dicionário Python e pega a lista dentro de 'data'
         services = response.json().get('data', [])
         
-        print("OS SERVIÇOS ENCONTRADOS NA IBNJ FORAM:\n")
+        print("\n🔍  OS SERVIÇOS ENCONTRADOS NA IBNJ FORAM:\n")
         
         for service in services:
             # extrai o nome do serviço navegando pela estrutura de chaves do JSON
@@ -35,7 +35,7 @@ def descobrir_ids():
             # extrai o ID do serviço
             id_servico = service['id']
             
-            print(f"📌 Nome: {nome} | ID: {id_servico}")
+            print(f"📚 {nome} | ID: {id_servico}")
             print("-" * 40)
             
     else:
