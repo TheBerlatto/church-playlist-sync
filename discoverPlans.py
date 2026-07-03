@@ -1,8 +1,12 @@
 import os
 import requests
 from requests.auth import HTTPBasicAuth
+from dotenv import load_dotenv
 
-# --- CONFIGURANDO AS CREDENCIAIS ---
+# carrega as variáveis .env para a memória do sistema
+load_dotenv()
+
+# --- CONFIGURA AS CREDENCIAIS ---
 APP_ID = os.getenv("PC_APP_ID")
 SECRET = os.getenv("PC_SECRET")
 
