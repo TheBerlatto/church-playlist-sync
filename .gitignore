@@ -1,0 +1,10 @@
+# Ignorar arquivos de credenciais locais
+.env
+
+# Ignorar o cache de login que o Spotipy cria automaticamente
+.cache
+
+# Ignorar pastas virtuais do Python (se você usar)
+__pycache__/
+venv/
+.venv/
